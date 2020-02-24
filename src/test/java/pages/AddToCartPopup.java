@@ -25,4 +25,13 @@ public class AddToCartPopup {
     public SelenideElement productPrice() {
         return $("#layer_cart_product_price");
     }
+
+    public void continueShopping() {
+        $("span.continue").click();
+    }
+
+    public CartPage proceedToCheckout() {
+        $("a[title='Proceed to checkout']").click();
+        return new CartPage();
+    }
 }

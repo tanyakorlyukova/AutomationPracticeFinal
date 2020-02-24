@@ -23,4 +23,13 @@ public class HomePage {
     public SelenideElement signInButton() {
         return $("a.login");
     }
+
+    public CartPage openCart() {
+        $("div.shopping_cart>a").click();
+        return new CartPage();
+    }
+
+    public void openCategoryWomenPage() {
+        $("a[title='Women']").click();
+    }
 }
