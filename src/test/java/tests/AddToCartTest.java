@@ -1,5 +1,8 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Test;
 import pages.AddToCartPopup;
 import pages.DetailedProductPage;
@@ -12,6 +15,8 @@ import static com.codeborne.selenide.Condition.visible;
 public class AddToCartTest extends BaseTest {
 
     @Test
+    @Description(value = "Check that product can be added to Cart from Homepage")
+    @Severity(value = SeverityLevel.CRITICAL)
     public void addToCartFromHomepage() {
         ProductBlock product = new ProductBlock();
         AddToCartPopup addToCartPopup = product.clickOnAddToCartButton("Printed Dress");
@@ -23,6 +28,8 @@ public class AddToCartTest extends BaseTest {
     }
 
     @Test
+    @Description(value = "Check that product can be added to Cart from Detailed Product Info page")
+    @Severity(value = SeverityLevel.CRITICAL)
     public void addToCartFromDetailedInfoPage() {
         ProductBlock product = new ProductBlock();
         DetailedProductPage detailedPage = product.openDetailedPageForProduct("Blouse");

@@ -1,5 +1,8 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Test;
 import pages.DetailedProductPage;
 import pages.ProductBlock;
@@ -10,6 +13,8 @@ import static com.codeborne.selenide.Condition.visible;
 public class ViewDetailedInfoTest extends BaseTest {
 
     @Test
+    @Description(value = "Check that Detailed Info page contains correct information about product")
+    @Severity(value = SeverityLevel.NORMAL)
     public void viewDetailedInfo() {
         ProductBlock product = new ProductBlock();
         DetailedProductPage detailedPage = product.openDetailedPageForProduct("Blouse");

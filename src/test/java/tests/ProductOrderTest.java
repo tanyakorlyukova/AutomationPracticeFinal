@@ -1,5 +1,8 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pages.*;
@@ -18,6 +21,8 @@ public class ProductOrderTest extends BaseTest {
 
 
     @Test
+    @Description(value = "Check that registered user can order a product from Cart")
+    @Severity(value = SeverityLevel.BLOCKER)
     public void orderProduct() {
         ProductBlock product = new ProductBlock();
         AddToCartPopup addToCartPopup = product.clickOnAddToCartButton("Faded Short Sleeve T-shirts");

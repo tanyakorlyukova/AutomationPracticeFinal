@@ -1,5 +1,8 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -9,6 +12,8 @@ import static com.codeborne.selenide.Condition.*;
 public class LoginTest  extends BaseTest {
 
     @Test
+    @Description(value = "Check that registered user can log in")
+    @Severity(value = SeverityLevel.BLOCKER)
     public void correctLogin() {
         HomePage homePage = new HomePage();
         LoginPage loginPage = homePage.openLoginPage();
@@ -18,6 +23,8 @@ public class LoginTest  extends BaseTest {
     }
 
     @Test
+    @Description(value = "Check that logged in user can log out")
+    @Severity(value = SeverityLevel.NORMAL)
     public void logout() {
         HomePage homePage = new HomePage();
         LoginPage loginPage = homePage.openLoginPage();

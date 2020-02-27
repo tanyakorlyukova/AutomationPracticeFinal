@@ -1,5 +1,8 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pages.AddToCartPopup;
@@ -22,6 +25,8 @@ public class CartTest extends BaseTest {
     }
 
     @Test
+    @Description(value = "Check that number of products in Cart corresponds to number of added products")
+    @Severity(value = SeverityLevel.CRITICAL)
     public void checkProductsInCart() {
         HomePage homePage = new HomePage();
         CartPage cartPage = homePage.openCart();
@@ -30,6 +35,8 @@ public class CartTest extends BaseTest {
     }
 
     @Test
+    @Description(value = "Check that product can be deleted from Cart")
+    @Severity(value = SeverityLevel.NORMAL)
     public void deleteProductFromCart() {
         HomePage homePage = new HomePage();
         CartPage cartPage = homePage.openCart();
