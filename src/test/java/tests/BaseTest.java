@@ -11,7 +11,8 @@ public class BaseTest {
 
     @BeforeEach
     public void setup() {
-        Configuration.startMaximized=true;
+        Configuration.headless = true;
+        Configuration.browserSize = "1980x1080";
         open("http://automationpractice.com");
     }
 
