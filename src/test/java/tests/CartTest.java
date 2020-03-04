@@ -31,7 +31,7 @@ public class CartTest extends BaseTest {
     public void checkProductsInCart() {
         HomePage homePage = new HomePage();
         CartPage cartPage = homePage.openCart();
-        cartPage.cartPageHeading().shouldHave(text("SHOPPING-CART SUMMARY"));
+        cartPage.cartPageHeading().shouldHave(text("SHOPPING-CART SUMMARY!!!!!!!!!!!!!!!!"));
         cartPage.products().shouldHave(size(2));
     }
 
