@@ -25,7 +25,7 @@ public class AddToCartTest extends BaseTest {
         addToCartPopup.successMessage().shouldHave(text("Product successfully added to your shopping cart"));
         addToCartPopup.productQuantity().shouldHave(exactText("1"));
         addToCartPopup.productTitle().shouldHave(text("Printed Dress"));
-        addToCartPopup.productPrice().shouldHave(text("$26.00!!!!!!!!!!!!!!!!"));
+        addToCartPopup.productPrice().shouldHave(text("$26.00"));
     }
 
     @Test

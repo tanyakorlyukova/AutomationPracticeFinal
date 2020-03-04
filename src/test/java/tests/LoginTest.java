@@ -20,7 +20,7 @@ public class LoginTest  extends BaseTest {
         LoginPage loginPage = homePage.openLoginPage();
         loginPage.loginPageHeading().shouldHave(text("AUTHENTICATION"));
         loginPage.logIn("testuser00001@email.com", "password");
-        loginPage.userMenuItem().shouldHave(text("Test User!!!!!!!!!!!!!!!!!"));
+        loginPage.userMenuItem().shouldHave(text("Test User"));
     }
 
     @Test
@@ -29,7 +29,7 @@ public class LoginTest  extends BaseTest {
     public void logout() {
         HomePage homePage = new HomePage();
         LoginPage loginPage = homePage.openLoginPage();
-        loginPage.logIn("testuser00001@email.com", "password!!!!!!!!!!");
+        loginPage.logIn("testuser00001@email.com", "password");
         homePage.logout();
         loginPage.userMenuItem().should(not(exist))
                 .shouldNotBe(visible);
