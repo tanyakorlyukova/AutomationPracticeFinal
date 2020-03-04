@@ -17,7 +17,7 @@ public class BaseTest {
     @BeforeAll
     public static void setup() {
         Configuration.remote = "http://localhost:4444/wd/hub";
-        Configuration.browser = "chrome";
+        //Configuration.browser = "chrome";
         Configuration.browserSize = "1980x1080";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
